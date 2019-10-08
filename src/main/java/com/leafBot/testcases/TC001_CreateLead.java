@@ -25,10 +25,10 @@ public class TC001_CreateLead extends  ProjectSpecificMethods{
 		.clickLogin()
 		.clickCRMSFA()
 		.clickCreateLead()
-		.companyName(companyName)
-		.firstName(firstName)
-		.lastName(lastName);
-		
+		.EnteringDetails(companyName, firstName, lastName)
+		.clickCreateLeadButton()
+		.click_LeadTabAndFindLead_Edit()
+		.verify_ClearAndType_CompanyName_ClickEdit();
 	
 	}
 

@@ -9,24 +9,19 @@ public class CreateLead extends SeleniumBase{
 		return this;
 	}
 	
-	public CreateLead companyName(String companyName) {
+	public CreateLead EnteringDetails(String companyName, String firstName, String lastName) {
 		clearAndType(locateElement("id", "createLeadForm_companyName"), companyName);
-		return this;
-	}
-	
-	public CreateLead firstName(String firstName) {
 		clearAndType(locateElement("id", "createLeadForm_firstName"), firstName);
-		return this;
-	}
-	
-	public CreateLead lastName(String lastName) {
 		clearAndType(locateElement("id", "createLeadForm_lastName"),lastName);
+		clearAndType(locateElement("id", "createLeadForm_generalProfTitle"), "My Profile");
+		
 		return this;
 	}
 	
-	public CreateLead clickCreateLeadButton() {
+	
+	public EditLead clickCreateLeadButton() {
 		click(locateElement("xpath","//input[@value='Create Lead']"));
-		return this;
+		return new EditLead();
 	}
 
 	
